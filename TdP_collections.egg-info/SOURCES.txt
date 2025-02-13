@@ -15,6 +15,7 @@ TdP_collections/graphs/topological_sort.py
 TdP_collections/graphs/transitive_closure.py
 TdP_collections/hash_table/__init__.py
 TdP_collections/hash_table/chain_hash_map.py
+TdP_collections/hash_table/double_hash_map.py
 TdP_collections/hash_table/hash_map_base.py
 TdP_collections/hash_table/map_base.py
 TdP_collections/hash_table/probe_hash_map.py
@@ -39,6 +40,11 @@ TdP_collections/queue/array_queue.py
 TdP_collections/queue/queue.py
 TdP_collections/stack/__init__.py
 TdP_collections/stack/array_stack.py
+TdP_collections/text/__init__.py
+TdP_collections/text/find_boyer_moore.py
+TdP_collections/text/find_brute.py
+TdP_collections/text/find_kmp.py
+TdP_collections/text/lcs.py
 TdP_collections/tree/__init__.py
 TdP_collections/tree/binary_tree.py
 TdP_collections/tree/linked_binary_tree.py

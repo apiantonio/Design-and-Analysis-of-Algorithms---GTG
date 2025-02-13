@@ -54,3 +54,53 @@ def compute_kmp_fail(P):
     else:                          # no match found starting at j
       j += 1
   return fail
+
+@handmade # type: ignore
+def find_kmp_all(T, P):
+  """Return all index of T at which substring P begins (or else -1)."""
+  n, m = len(T), len(P)            # introduce convenient notations
+  if m == 0: return 0              # trivial search for empty string
+  fail = compute_kmp_fail(P)       # rely on utility to precompute
+  j = 0                            # index into text
+  k = 0                            # index into pattern
+  matches = [] # lista di indici in cui iniziano le occorrenze del pattern nel testo 
+  while j < n:
+    if T[j] == P[k]:               # P[0:1+k] matched thus far
+      if k == m - 1:               # match is complete
+        matches.append(j - m + 1)  # memorizza l'indice in cui inizia l'occorrenza
+        j += 1                     # passa al carattere del testo successivo
+        k = fail[k]                # usa il suffisso che è anche prefisso di tutto il pattern
+      else:               
+        j += 1                     # try to extend match
+        k += 1
+    elif k > 0:                    
+      k = fail[k-1]                # reuse suffix of P[0:k]
+    else:
+      j += 1
+  return matches                   # restituisci la lista indici (vuota se non ci sono occorrenze)
+
+@handmade # type: ignore
+#TODO
+def find_kmp_last(T, P):
+  """Return all index of T at which substring P begins (or else -1)."""
+  n, m = len(T), len(P)            # introduce convenient notations
+  if m == 0: return 0              # trivial search for empty string
+  fail = compute_kmp_fail(P)       # rely on utility to precompute
+  j = 0                            # index into text
+  k = 0                            # index into pattern
+  matches = [] # lista di indici in cui iniziano le occorrenze del pattern nel testo 
+  while j < n:
+    if T[j] == P[k]:               # P[0:1+k] matched thus far
+      if k == m - 1:               # match is complete
+        matches.append(j - m + 1)  # memorizza l'indice in cui inizia l'occorrenza
+        j += 1                     # passa al carattere del testo successivo
+        k = fail[k]                # usa il suffisso che è anche prefisso di tutto il pattern
+      else:               
+        j += 1                     # try to extend match
+        k += 1
+    elif k > 0:                    
+      k = fail[k-1]                # reuse suffix of P[0:k]
+    else:
+      j += 1
+  return matches                   # restituisci la lista indici (vuota se non ci sono occorrenze)
+

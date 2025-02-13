@@ -71,6 +71,6 @@ def shortest_path_tree(g, s, d):
       for e in g.incident_edges(v, False):       # consider INCOMING edges
         u = e.opposite(v)
         wgt = e.element()
-        if d[v] == d[u] + wgt:
+        if d[v] == d[u] + wgt:                   # se per raggiungere v a partire da s si passa per u e poi per l'arco che collega u e v
           tree[v] = e                            # edge e is used to reach v
   return tree

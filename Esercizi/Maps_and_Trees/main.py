@@ -1,6 +1,6 @@
 from count_leafs_leftchild import *
 from count_descendants import *
-
+from TdP_collections.text.find_kmp import * 
 
 def main():
     T = TreeMap()
@@ -31,6 +31,8 @@ def main():
 
     print("Foglie figlie sinistre: " + repr(count_leafs_leftchild(T)))
     
+    # P = "CECCECE"
+    # print(compute_kmp_fail(P))
     
 if __name__ == "__main__":
     main()

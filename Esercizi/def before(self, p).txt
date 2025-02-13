@@ -1,0 +1,13 @@
+def before(self, p)
+	"""restituisce la Position prima di p secondo l'ordine naturale"""
+	
+	self.validate(p)
+	if self.left(p)
+		return self._subtree_last_position(self.left(p))
+	else
+		walk = p
+		above = self.parent(walk)
+		while above is not None and walk == self.left(above)
+			walk = above
+			above = self.parent(walk)
+		return 

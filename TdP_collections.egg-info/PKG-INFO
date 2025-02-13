@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: TdP_collections
+Version: 1.0.2
+Summary: Code of "Data Structures and Algorithms in Python"
+Author: Michael T. Goodrich, Roberto Tamassia, Michael H. Goldwasser
+
+Modifiche: aggiunta heapify, commenti vari

@@ -66,7 +66,7 @@ class HeapPriorityQueue(PriorityQueueBase): # base class defines _Item
         self._swap(j, small_child)
         self._downheap(small_child)    # recur at position of small child
    
-  @dalleslide   # type: ignore
+  '''dalle slide'''
   def _heapify(self):
     """Transform an array into a binary heap."""
     start = self._parent(len(self)-1)
@@ -78,7 +78,7 @@ class HeapPriorityQueue(PriorityQueueBase): # base class defines _Item
   #  """Create a new empty Priority Queue."""
   #  self._data = []
 
-  @dalleslide   # type: ignore
+  '''dalle slide'''
   def __init__(self, contents = ()):
     """Create a new PriorityQueue with n elements. """
     self._data =  [ self._Item(k, v) for k, v in contents ]

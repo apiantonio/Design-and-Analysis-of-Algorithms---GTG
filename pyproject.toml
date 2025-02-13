@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "TdP_collections"
+version = "1.0.6"
+description = "Code of 'Data Structures and Algorithms in Python'"
+readme = "README.md@"
+authors = [{ name = "Michael T. Goodrich" }, { name = "Roberto Tamassia" }, { name = "Michael H. Goldwasser" }]
+
+[tool.setuptools.packages.find]
+include = ["tdp_collections*"]

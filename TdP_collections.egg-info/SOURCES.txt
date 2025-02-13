@@ -1,4 +1,5 @@
-setup.py
+README.md
+pyproject.toml
 TdP_collections/__init__.py
 TdP_collections.egg-info/PKG-INFO
 TdP_collections.egg-info/SOURCES.txt

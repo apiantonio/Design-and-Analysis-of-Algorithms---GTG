@@ -1,10 +1,3 @@
-Metadata-Version: 2.2
-Name: TdP_collections
-Version: 1.0.6
-Summary: Code of 'Data Structures and Algorithms in Python'
-Author: Michael T. Goodrich, Roberto Tamassia, Michael H. Goldwasser
-Description-Content-Type: text/markdown
-
 # 📚 Algoritmi e Strutture Dati in Python
 
 Questa repository contiene implementazioni di **algoritmi e strutture dati in Python**, basate sul libro  

@@ -43,7 +43,7 @@ def MST_PrimJarnik(g):
     pqlocator[v] = pq.add(d[v], (v,None))
 
   while not pq.is_empty():
-    key,value = pq.remove_min()
+    key, value = pq.remove_min()
     u,edge = value                                  # unpack tuple from pq
     del pqlocator[u]                                # u is no longer in pq
     if edge is not None:
@@ -78,10 +78,10 @@ def MST_Kruskal(g):
     pq.add(e.element(), e)    # edge's element is assumed to be its weight
 
   size = g.vertex_count()
-  while len(tree) != size - 1 and not pq.is_empty():
+  while len(tree) != size - 1 and not pq.is_empty(): # until there is a vertex not in tree and there are edges in pq
     # tree not spanning and unprocessed edges remain
-    weight,edge = pq.remove_min()
-    u,v = edge.endpoints()
+    weight, edge = pq.remove_min()
+    u, v = edge.endpoints()
     a = forest.find(position[u])
     b = forest.find(position[v])
     if a != b:

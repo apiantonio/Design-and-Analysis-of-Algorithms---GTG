@@ -40,7 +40,10 @@ def find_kmp(T, P):
   return -1                        # reached end without match
 
 def compute_kmp_fail(P):
-  """Utility that computes and returns KMP 'fail' list."""
+  """Utility that computes and returns KMP 'fail' list.
+  
+  Calcola l'array LPS (Longest Prefix Suffix) per il pattern P.
+  """
   m = len(P)
   fail = [0] * m                   # by default, presume overlap of 0 everywhere
   j = 1
@@ -65,7 +68,7 @@ def find_kmp_all(T, P):
   fail = compute_kmp_fail(P)       # rely on utility to precompute
   j = 0                            # index into text
   k = 0                            # index into pattern
-  matches = [] # lista di indici in cui iniziano le occorrenze del pattern nel testo 
+  matches = []                     # lista di indici in cui iniziano le occorrenze del pattern nel testo 
   while j < n:
     if T[j] == P[k]:               # P[0:1+k] matched thus far
       if k == m - 1:               # match is complete
@@ -80,7 +83,7 @@ def find_kmp_all(T, P):
     else:
       j += 1
       
-  return matches                   # restituisci la lista indici (vuota se non ci sono occorrenze)
+  return matches if matches else -1  # restituisci la lista indici (-1 se vuota)
 
 '''Fatto da me'''
 def find_kmp_last(T, P):
